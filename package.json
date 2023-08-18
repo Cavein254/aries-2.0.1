@@ -16,10 +16,12 @@
     "react-markdown": "^8.0.7",
     "react-syntax-highlighter": "^15.5.0",
     "rehype": "^12.0.1",
+    "rehype-figure": "^1.0.1",
     "rehype-katex": "^6.0.3",
     "rehype-raw": "^6.1.1",
     "remark-gfm": "^3.0.1",
-    "remark-math": "^5.1.1"
+    "remark-math": "^5.1.1",
+    "remark-toc": "^8.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
