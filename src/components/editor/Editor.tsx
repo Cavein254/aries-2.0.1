@@ -1,8 +1,11 @@
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+
 type Props = {
   userInput: string;
 };
@@ -10,8 +13,8 @@ const Editor = ({ userInput }: Props) => {
   return (
     <ReactMarkdown
       children={userInput}
-      rehypePlugins={[rehypeRaw]}
-      remarkPlugins={[remarkGfm]}
+      rehypePlugins={[rehypeRaw, rehypeKatex]}
+      remarkPlugins={[remarkGfm, remarkMath]}
       components={{
         code({ node, inline, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || '');
