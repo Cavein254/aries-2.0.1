@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.5",
     "@types/react-syntax-highlighter": "^15.5.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -18,6 +21,7 @@
     "rehype": "^12.0.1",
     "rehype-figure": "^1.0.1",
     "rehype-katex": "^6.0.3",
+    "rehype-mermaidjs": "^1.0.1",
     "rehype-raw": "^6.1.1",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
