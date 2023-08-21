@@ -1,5 +1,6 @@
 import Pad from './components/pad/Pad';
 import Layout from './layout/Layout';
+import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 
