@@ -10,7 +10,7 @@ const PostList = () => {
   const renderedPost = posts.map((post) => {
     return (
       <Box key={post.id}>
-        <Typography variant="h4">{post.message}</Typography>
+        <Typography variant="h4">{post.message.substring(0, 100)}</Typography>
       </Box>
     );
   });
