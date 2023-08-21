@@ -6,26 +6,26 @@ import RegisterPage from './pages/RegisterPage';
 
 const routerConfig = [
   {
-    path:'/login',
+    path: '/login',
     element: <LoginPage />,
-  }
+  },
   {
-    path:'/register',
-    element:<RegisterPage />,
+    path: '/register',
+    element: <RegisterPage />,
   },
   {
     element: <Layout />,
     children: [
       {
         path: '/',
-        element: <Home />
-      }
-    ]
-  }
-]
-const router = createBrowserRouter(routerConfig)
+        element: <Home />,
+      },
+    ],
+  },
+];
+const router = createBrowserRouter(routerConfig);
 function App() {
-  return <RouterProvider router={router} />
+  return <RouterProvider router={router} />;
 }
 
 export default App;
