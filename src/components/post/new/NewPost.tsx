@@ -1,9 +1,19 @@
 import { Box, Button, Paper, TextField } from '@mui/material';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { postAdded } from '../../../features/posts/postsSlice';
+import PostList from '../PostList';
 import './styles.css';
 const NewPost = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
+  const dispatch = useDispatch();
+
+  const handleOnSave = () => {
+    if (title && body) {
+      dispatch(postAdded(title, body));
+    }
+  };
   return (
     <Box
       sx={{
@@ -30,7 +40,10 @@ const NewPost = () => {
           />
         </Box>
       </Paper>
-      <Button variant="contained">Submit</Button>
+      <Button variant="contained" type="submit" onClick={handleOnSave}>
+        Submit
+      </Button>
+      <PostList />
     </Box>
   );
 };

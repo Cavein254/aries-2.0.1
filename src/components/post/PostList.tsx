@@ -11,7 +11,8 @@ const PostList = () => {
   const renderedPost = posts.map((post) => {
     return (
       <Box key={post.id}>
-        <Typography variant="h4">{post.message.substring(0, 100)}</Typography>
+        <Typography variant="h1">{post?.title}</Typography>
+        <Typography variant="h4">{post?.body?.substring(0, 100)}</Typography>
       </Box>
     );
   });
