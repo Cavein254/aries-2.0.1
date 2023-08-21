@@ -1,5 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './layout/Layout';
+import AddPostPage from './pages/AddPostPage';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import PostsPage from './pages/PostsPage';
@@ -24,6 +25,10 @@ const routerConfig = [
       {
         path: '/posts',
         element: <PostsPage />,
+      },
+      {
+        path: '/new',
+        element: <AddPostPage />,
       },
     ],
   },
