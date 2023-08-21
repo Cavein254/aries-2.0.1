@@ -1,4 +1,27 @@
 import Pad from './components/pad/Pad';
+import Layout from './layout/Layout';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+
+const routerConfig = [
+  {
+    path:'/login',
+    element: <LoginPage />,
+  }
+  {
+    path:'/register',
+    element:<RegisterPage />,
+  },
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: '/',
+        element: <Home />
+      }
+    ]
+  }
+]
 
 function App() {
   return (
