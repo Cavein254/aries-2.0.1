@@ -1,4 +1,4 @@
-import { Box, Button, TextField } from '@mui/material';
+import { Box, Button, InputLabel, TextField } from '@mui/material';
 import './styles.css';
 
 const Login = () => {
@@ -7,21 +7,25 @@ const Login = () => {
       <Box className="auth-container">
         <Box></Box>
         <form className="auth-form">
+          <InputLabel>Username</InputLabel>
           <TextField
             variant="standard"
-            placeholder="Enter your user name"
+            placeholder="Enter your username"
             type="text"
           />
+          <InputLabel>Email</InputLabel>
           <TextField
             variant="standard"
             placeholder="Enter your Email Address"
             type="email"
           />
+          <InputLabel>Password</InputLabel>
           <TextField
             variant="standard"
             placeholder="Enter your Password"
             type="password"
           />
+          <InputLabel>Confirm Password</InputLabel>
           <TextField
             variant="standard"
             placeholder="Re-enter your password"
