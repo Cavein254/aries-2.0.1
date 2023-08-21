@@ -1,0 +1,7 @@
+.auth-container {
+  margin: 10% 1rem 1rem 1rem;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
