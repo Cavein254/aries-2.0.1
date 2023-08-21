@@ -3,19 +3,23 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = [
   {
     id: 1,
-    message: 'This is the first post',
+    title: 'This is the first post',
+    body: 'This is body one',
   },
   {
     id: 2,
-    message: 'This is the second post',
+    title: 'This is the second post',
+    body: 'This is body two',
   },
   {
     id: 3,
-    message: 'This is the third post',
+    title: 'This is the third post',
+    body: 'This is body three',
   },
   {
     id: 4,
-    message: 'This is the fourth post',
+    title: 'This is the fourth post',
+    body: 'This is body four',
   },
 ];
 
