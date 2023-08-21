@@ -1,4 +1,4 @@
-import Pad from './components/pad/Pad';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './layout/Layout';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
@@ -23,14 +23,9 @@ const routerConfig = [
     ]
   }
 ]
-
+const router = createBrowserRouter(routerConfig)
 function App() {
-  return (
-    <>
-      <h1>This is a basic html markdown file</h1>
-      <Pad />
-    </>
-  );
+  return <RouterProvider router={router} />
 }
 
 export default App;
