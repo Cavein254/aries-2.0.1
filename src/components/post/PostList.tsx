@@ -1,13 +1,21 @@
 import { Box, Typography } from '@mui/material';
-import { useSelector } from 'react-redux';
-import { selectAllposts } from '../../features/posts/postsSlice';
+import { useGetPostsQuery } from '../../features/posts/api/apiSlice';
 
 type PostProps = {
   id: number;
   message: string;
 };
 const PostList = () => {
-  const posts = useSelector<PostProps[]>(selectAllposts);
+  //   const posts = useSelector<PostProps[]>(selectAllposts);
+  const {
+    data: posts,
+    isError,
+    isLoading,
+    isSuccess,
+    error,
+  } = useGetPostsQuery();
+  console.log(posts);
+  console.log(posts);
   const renderedPost = posts.map((post) => {
     return (
       <Box key={post.id}>
