@@ -1,13 +1,7 @@
-import { Box, Paper } from '@mui/material';
+import NewPost from '../components/post/new/NewPost';
 
 const AddPostPage = () => {
-  return (
-    <Box>
-      <Paper>
-        <textarea rows={20} className="create-post" />
-      </Paper>
-    </Box>
-  );
+  return <NewPost />;
 };
 
 export default AddPostPage;
