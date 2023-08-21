@@ -2,12 +2,13 @@ import 'katex/dist/katex.min.css';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis';
+import rehypeFigure from 'rehype-figure';
 import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import remarkToc from 'remark-toc';
+
 type Props = {
   userInput: string;
 };
@@ -15,7 +16,7 @@ const Editor = ({ userInput }: Props) => {
   return (
     <ReactMarkdown
       children={userInput}
-      rehypePlugins={[rehypeRaw, rehypeKatex, rehypeAccessibleEmojis]}
+      rehypePlugins={[rehypeRaw, rehypeKatex, rehypeFigure]}
       remarkPlugins={[remarkGfm, remarkMath, remarkToc]}
       components={{
         code({ node, inline, className, children, ...props }) {
